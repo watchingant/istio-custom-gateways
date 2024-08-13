@@ -23,7 +23,17 @@ kubectl create secret generic -n cert-manager istio-root-ca --from-file=ca.pem=c
 
 ## Install Cert Manager (kubectl or Helm)
 ```
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.15.2/cert-manager.yaml
+```
+OR
+```
+helm repo add jetstack https://charts.jetstack.io --force-update
+helm install \
+  cert-manager jetstack/cert-manager \
+  --namespace cert-manager \
+  --create-namespace \
+  --version v1.15.2 \
+  --set crds.enabled=true
 ```
 
 ## Install AWS Private CA Issuer Plugin

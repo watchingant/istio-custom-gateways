@@ -5,6 +5,4 @@ This repository contains source code configurations for disabling and replacing 
 
 
 # istio-custom-gateways
-# istio-custom-gateways
-# istio-custom-gateways
-# istio-custom-gateways
+
